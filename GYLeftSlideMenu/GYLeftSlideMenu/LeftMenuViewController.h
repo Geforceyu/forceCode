@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LeftMenuViewController.h
 //  GYLeftSlideMenu
 //
 //  Created by Geforceyu on 15/4/10.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LeftMenuViewController : UIViewController
 
 @end
-

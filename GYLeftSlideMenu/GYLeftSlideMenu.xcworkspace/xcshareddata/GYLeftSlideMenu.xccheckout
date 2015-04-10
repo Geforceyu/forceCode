@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70F77AAD-09FD-4ADF-A235-D3ED4D0A41C2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GYLeftSlideMenu</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>266D3E4A30B7299749F511D41C124B7A81F71937</key>
+		<string>https://github.com/Geforceyu/forceCode.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GYLeftSlideMenu/GYLeftSlideMenu.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>266D3E4A30B7299749F511D41C124B7A81F71937</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Geforceyu/forceCode.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>266D3E4A30B7299749F511D41C124B7A81F71937</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>266D3E4A30B7299749F511D41C124B7A81F71937</string>
+			<key>IDESourceControlWCCName</key>
+			<string>forceCode</string>
+		</dict>
+	</array>
+</dict>
+</plist>
