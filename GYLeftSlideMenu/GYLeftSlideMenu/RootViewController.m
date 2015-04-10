@@ -19,32 +19,26 @@
 @end
 
 @implementation RootViewController
--(instancetype)init
+
+-(void)loadView
 {
-    self = [super init];
-    if (self) {
-        //配置顶视图
-        self.topViewController = [[HomeViewController alloc]init];
-        self.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
-        self.customAnchoredGestures = @[];
+    [super loadView];
+    //配置顶视图
+    self.topViewController = [[HomeViewController alloc]init];
+    
+    //配置底左视图
+    self.underLeftViewController = [[LeftMenuViewController alloc]init];
+    self.anchorRightPeekAmount   = 60;
+    
+    //配置左滑效果
+    id<ECSlidingViewControllerDelegate> transition = self.transitions.foldAnimationController;
+    self.delegate = transition;
+    self.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
+    self.customAnchoredGestures = @[];
+    
+    [self.topViewController.view removeGestureRecognizer:self.dynamicTransitionPanGesture];
+    [self.topViewController.view addGestureRecognizer:self.panGesture];
 
-        [self.topViewController.view removeGestureRecognizer:self.dynamicTransitionPanGesture];
-        [self.topViewController.view addGestureRecognizer:self.panGesture];
-
-        
-        //配置底左视图
-        self.underLeftViewController = [[LeftMenuViewController alloc]init];
-        
-        self.anchorRightPeekAmount   = 60;
-        
-        
-        //配置左滑效果
-        id<ECSlidingViewControllerDelegate> transition = self.transitions.foldAnimationController;
-        self.delegate = transition;
-
-        
-    }
-    return self;
 }
 - (void)viewDidLoad {
 
@@ -55,11 +49,9 @@
 
 - (void)initUserInterface
 {
-
-    UIImageView * backImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
-    backImageView.image = [UIImage imageNamed:@"personal_background_shadow_am.png"];
-    [self.view insertSubview:backImageView atIndex:0];
-    
+//    UIImageView * backImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+//    backImageView.image = [UIImage imageNamed:@"personal_background_shadow_am.png"];
+//    [self.view insertSubview:backImageView atIndex:0];
 }
 -(METransitions *)transitions
 {

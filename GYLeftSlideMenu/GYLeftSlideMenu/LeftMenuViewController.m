@@ -20,7 +20,7 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view insertSubview:self.backImageView atIndex:0];
     [self.view addSubview:self.tableView];
     
@@ -39,6 +39,7 @@
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)-20)];
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
 }
@@ -55,8 +56,10 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld1231241241241451451541251",indexPath.row];
+    [cell.selectedBackgroundView.layer removeAllAnimations];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld1231241241",indexPath.row];
     
     return cell;
 }
