@@ -12,6 +12,7 @@
 
 @property (nonatomic,strong)UIImageView * backImageView;
 @property (nonatomic,strong)UITableView * tableView;
+@property (nonatomic,strong)UISearchBar * searchBar;
 @end
 
 @implementation LeftMenuViewController
@@ -20,9 +21,10 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor      = [UIColor whiteColor];
     [self.view insertSubview:self.backImageView atIndex:0];
     [self.view addSubview:self.tableView];
+    self.tableView.tableHeaderView = self.searchBar;
     
 }
 - (UIImageView *)backImageView
@@ -36,12 +38,21 @@
 -(UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)-20)];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, 200, CGRectGetHeight(self.view.bounds)-20)];
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
+}
+-(UISearchBar *)searchBar
+{
+    if (!_searchBar) {
+        _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 30)];
+        _searchBar.placeholder = @"搜索表情";
+        _searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    }
+    return _searchBar;
 }
 #pragma mark <UITableViewDataSource>
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -59,7 +70,7 @@
         cell.textLabel.textColor = [UIColor whiteColor];
     }
     [cell.selectedBackgroundView.layer removeAllAnimations];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld1231241241",indexPath.row];
+    cell.textLabel.text = @"炮炮兵";
     
     return cell;
 }

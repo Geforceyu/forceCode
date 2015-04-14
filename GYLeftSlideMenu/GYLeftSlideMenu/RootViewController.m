@@ -24,17 +24,20 @@
 {
     [super loadView];
     //配置顶视图
-    self.topViewController = [[HomeViewController alloc]init];
+    UINavigationController * topNavc   = [[UINavigationController alloc]initWithRootViewController:[[HomeViewController alloc] init]];
+    topNavc.navigationBar.barTintColor = [UIColor colorWithRed:0 green:122/255.0 blue:175/255.0 alpha:1];
+    topNavc.navigationBar.tintColor    = [UIColor whiteColor];
+    self.topViewController             = topNavc;
     
     //配置底左视图
     self.underLeftViewController = [[LeftMenuViewController alloc]init];
-    self.anchorRightPeekAmount   = 60;
+    self.anchorRightPeekAmount   =  SCREEN_WIDTH - LEFT_MENU_WIDTH;
     
     //配置左滑效果
     id<ECSlidingViewControllerDelegate> transition = self.transitions.foldAnimationController;
-    self.delegate = transition;
-    self.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
-    self.customAnchoredGestures = @[];
+    self.delegate                                  = transition;
+    self.topViewAnchoredGesture                    = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
+    self.customAnchoredGestures                    = @[];
     
     [self.topViewController.view removeGestureRecognizer:self.dynamicTransitionPanGesture];
     [self.topViewController.view addGestureRecognizer:self.panGesture];
@@ -49,9 +52,8 @@
 
 - (void)initUserInterface
 {
-//    UIImageView * backImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
-//    backImageView.image = [UIImage imageNamed:@"personal_background_shadow_am.png"];
-//    [self.view insertSubview:backImageView atIndex:0];
+
+    self.view.backgroundColor = [UIColor blackColor];
 }
 -(METransitions *)transitions
 {
@@ -67,4 +69,5 @@
     
     return _dynamicTransitionPanGesture;
 }
+
 @end

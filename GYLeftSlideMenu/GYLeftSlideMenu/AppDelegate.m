@@ -9,11 +9,15 @@
 #import "AppDelegate.h"
 #import "ECSlidingViewController.h"
 #import "RootViewController.h"
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -22,15 +26,43 @@
 //    NSFileManager * filemanager = [[NSFileManager alloc]init];
 //    [filemanager createFileAtPath:@"/Users/geforceyu/forceCode/GYLeftSlideMenu/Podfile" contents:nil attributes:nil];
     
-    _window                    = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    _window.backgroundColor    = [UIColor whiteColor];
-    _window.rootViewController = [[RootViewController alloc]init];
+    [ShareSDK registerApp:@"6bc4d179961b"];
+    //添加微信应用 注册网址 http://open.weixin.qq.com
+    [ShareSDK connectWeChatWithAppId:@"wxbab05c2f4606ac46"
+                           wechatCls:[WXApi class]];
+    [ShareSDK connectWeChatWithAppId:@"wxbab05c2f4606ac46"   //微信APPID
+                           appSecret:@"144f16e69b1ad2adceb4027b234056ab"  //微信APPSecret
+                           wechatCls:[WXApi class]];
     
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+
+    _window                                          = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor                          = [UIColor whiteColor];
+    _window.rootViewController                       = [[RootViewController alloc]init];
+
     [_window makeKeyAndVisible];
 
+    
     return YES;
 }
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
