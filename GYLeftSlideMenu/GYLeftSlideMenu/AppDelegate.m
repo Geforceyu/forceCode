@@ -12,7 +12,7 @@
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -27,6 +27,13 @@
 //    [filemanager createFileAtPath:@"/Users/geforceyu/forceCode/GYLeftSlideMenu/Podfile" contents:nil attributes:nil];
     
     [ShareSDK registerApp:@"6bc4d179961b"];
+//    //添加微信应用 注册网址 http://open.weixin.qq.com
+//    [ShareSDK connectWeChatWithAppId:@"wxbab05c2f4606ac46"
+//                           wechatCls:[WXApi class]];
+//    [ShareSDK connectWeChatWithAppId:@"wxbab05c2f4606ac46"   //微信APPID
+//                           appSecret:@"144f16e69b1ad2adceb4027b234056ab"  //微信APPSecret
+//                           wechatCls:[WXApi class]];
+    
     //添加微信应用 注册网址 http://open.weixin.qq.com
     [ShareSDK connectWeChatWithAppId:@"wxbab05c2f4606ac46"
                            wechatCls:[WXApi class]];
@@ -62,6 +69,15 @@
                  sourceApplication:sourceApplication
                         annotation:annotation
                         wxDelegate:self];
+}
+-(void)onReq:(BaseReq *)req
+{
+    
+    
+}
+-(void)onResp:(BaseResp *)resp
+{
+    
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

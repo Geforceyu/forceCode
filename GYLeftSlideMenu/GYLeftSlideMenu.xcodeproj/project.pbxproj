@@ -21,7 +21,6 @@
 		55458F691ADBC1CD00625B8A /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55458F681ADBC1CD00625B8A /* libicucore.dylib */; };
 		55458F6B1ADBC1D800625B8A /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55458F6A1ADBC1D800625B8A /* libz.1.2.5.dylib */; };
 		55458F6D1ADBC1DF00625B8A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55458F6C1ADBC1DF00625B8A /* Security.framework */; };
-		559A18C01ADB6DD100ED2E78 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 559A18BF1ADB6DD100ED2E78 /* test.gif */; };
 		55C8D3431AD7AF790032B46A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8D3421AD7AF790032B46A /* main.m */; };
 		55C8D3461AD7AF790032B46A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8D3451AD7AF790032B46A /* AppDelegate.m */; };
 		55C8D34E1AD7AF7A0032B46A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C8D34D1AD7AF7A0032B46A /* Images.xcassets */; };
@@ -65,7 +64,6 @@
 		55458F6A1ADBC1D800625B8A /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		55458F6C1ADBC1DF00625B8A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		559A189D1ADB5BDF00ED2E78 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		559A18BF1ADB6DD100ED2E78 /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
 		559A18C11ADB6E5B00ED2E78 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		559A18C31ADB6E6D00ED2E78 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		559A18C51ADB6E7A00ED2E78 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -290,7 +288,6 @@
 			children = (
 				55C8D38B1AD7D04E0032B46A /* HomeViewController.h */,
 				55C8D38C1AD7D04E0032B46A /* HomeViewController.m */,
-				559A18BF1ADB6DD100ED2E78 /* test.gif */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -416,7 +413,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				55458F5E1ADBC14300625B8A /* ShareSDKLocalizable.strings in Resources */,
-				559A18C01ADB6DD100ED2E78 /* test.gif in Resources */,
 				55C8D34E1AD7AF7A0032B46A /* Images.xcassets in Resources */,
 				55458F5F1ADBC14300625B8A /* Resource.bundle in Resources */,
 			);
