@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'forceCode'
-  s.version  = 'dev_ych'
+  s.version  = '1.0'
   s.license  = 'MIT'
   s.summary  = 'geforceyus force code'
   s.homepage = 'https://github.com/Geforceyu/forceCode'
