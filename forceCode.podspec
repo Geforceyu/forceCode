@@ -6,7 +6,7 @@ s.summary      = "geforceyu's force code'"
 
 s.homepage     = "https://github.com/Geforceyu/forceCode"
 s.license      = 'MIT'
-s.author       = { "Geforceuy" => "Geforceyu@outlook.com" }
+s.author       = { "Geforceuy" => "564678164@qq.com.com" }
 s.platform     = :ios, "7.0"
 s.ios.deployment_target = "7.0"
 s.source       = { :git => "https://github.com/Geforceyu/forceCode.git", :tag => s.version}
