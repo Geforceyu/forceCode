@@ -1,4 +1,4 @@
-Pod::Spec.new do |s|
+FoPod::Spec.new do |s|
   s.name     = 'forceCode'
   s.version  = '1.0'
   s.license  = 'MIT'
@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.authors  = { 'YuChonghua' => 'geforceyu@outlook.com' }
   s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => 1.0 }
   s.requires_arc = true
-  s.source_files =  '*.{h,m}'
+  s.source_files =  'ForceCode/*.{h,m}'
 end
