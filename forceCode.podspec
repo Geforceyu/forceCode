@@ -8,7 +8,5 @@ Pod::Spec.new do |s|
   s.authors  = { 'Geforceyu' => '564678164@qq.com' }
   s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => s.version, :submodules => true }
   s.requires_arc = true
-  
-  s.public_header_files = 'forceCode/ForceCode.h'
-  s.source_files = 'forceCode/ForceCode.h'
+  s.source_files =  'forceCode/*.{h,m}'
 end
