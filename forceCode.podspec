@@ -1,4 +1,4 @@
-FoPod::Spec.new do |s|
+FoPod::Spec.new do |spec|
   s.name     = 'forceCode'
   s.version  = '1.0'
   s.license  = 'MIT'
