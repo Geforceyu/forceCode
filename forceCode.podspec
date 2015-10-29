@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 s.name     = 'forceCode'
 
 
-s.version  = '0.01'
+s.version  = 'master'
 
 
 s.license  = 'MIT'
