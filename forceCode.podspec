@@ -19,7 +19,7 @@ s.homepage = 'https://github.com/Geforceyu/forceCode'
 s.authors  = { 'YuChonghua' => 'geforceyu@outlook.com' }
 
 
-s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => s.versioin.master, :submodules => true }
+s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => s.versioin, :submodules => true }
 
 
 s.requires_arc = true
