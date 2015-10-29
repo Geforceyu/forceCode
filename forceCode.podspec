@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 s.name     = 'forceCode'
 
 
-s.version  = 'master'
+s.version  = '0.01'
 
 
 s.license  = 'MIT'
@@ -19,7 +19,7 @@ s.homepage = 'https://github.com/Geforceyu/forceCode'
 s.authors  = { 'YuChonghua' => 'geforceyu@outlook.com' }
 
 
-s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => 0.01, :submodules => true }
+s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => 001, :submodules => true }
 
 
 s.requires_arc = true
