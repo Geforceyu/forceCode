@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 s.name     = 'forceCode'
 
 
-s.version  = '0.01'
+s.version  = '1.0'
 
 
 s.license  = 'MIT'
@@ -19,7 +19,7 @@ s.homepage = 'https://github.com/Geforceyu/forceCode'
 s.authors  = { 'YuChonghua' => 'geforceyu@outlook.com' }
 
 
-s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => 0.01 }
+s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => 1.0 }
 
 
 
