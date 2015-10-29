@@ -9,8 +9,8 @@ s.version  = '1.0'
 
 s.license  = 'MIT'
 
+s.summary  = 'geforceyus force code by 余崇华 联系我:564678164'
 
-s.summary  = 'geforceyus force code'
 
 
 s.homepage = 'https://github.com/Geforceyu/forceCode'
@@ -20,6 +20,7 @@ s.authors  = { 'YuChonghua' => 'geforceyu@outlook.com' }
 
 
 s.source   = { :git => 'https://github.com/Geforceyu/forceCode.git', :tag => 1.0 ,:submodules => true }
+
 
 
 s.requires_arc = true
