@@ -10,7 +10,7 @@ s.version  = '1.0'
 s.license  = 'MIT'
 
 
-s.summary  = 'geforceyus force code'
+s.summary  = 'geforceyus force code by 余崇华 联系我:564678164'
 
 
 s.homepage = 'https://github.com/Geforceyu/forceCode'
