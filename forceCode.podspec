@@ -1,4 +1,4 @@
-FoPod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
 
 s.name     = 'forceCode'
@@ -27,5 +27,9 @@ s.requires_arc = true
 
 s.source_files =  'ForceCode/*.{h,m}'
 
+s.platform = :ios
+s.platform = :osx
+s.ios.deployment_target = "7.0"
+s.osx.deployment_target = "10.7"
 
 end
